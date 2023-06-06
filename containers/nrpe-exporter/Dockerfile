@@ -9,6 +9,7 @@ RUN apt install -y wget make gcc procps
 
 RUN mkdir /opt/build && cd /opt/build \
   && wget https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.5/nagios-plugins-2.4.5.tar.gz \
+  && tar xvfz nagios-plugins-2.4.5.tar.gz
   && cd nagios-plugins-2.4.5 \
   && ./configure && make && make install
 
