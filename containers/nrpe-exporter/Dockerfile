@@ -3,7 +3,8 @@ RUN apt update \
   && apt upgrade -y \
   && apt install -y prometheus-node-exporter \
   && apt install -y nagios-nrpe-plugin \
-  && apt install -y nagios-plugins-contrib
+  && apt install -y nagios-plugins-contrib \
+  && apt install -y wget
 
 RUN wget https://github.com/nagios-plugins/nagios-plugins/releases/download/release-2.4.5/nagios-plugins-2.4.5.tar.gz \
   && cd nagios-plugins-2.4.5 \
